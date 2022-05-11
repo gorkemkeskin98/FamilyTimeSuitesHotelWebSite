@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\gorke\Desktop\Yeni klasör (10)</_PublishTargetUrl>
+    <History>True|2021-10-21T20:21:35.3704030Z;True|2021-10-21T22:33:24.5563381+03:00;True|2021-10-21T19:50:50.3527805+03:00;True|2021-10-19T22:22:10.7764526+03:00;True|2021-10-19T18:53:01.6913375+03:00;True|2021-10-17T17:08:38.1375078+03:00;True|2021-10-17T16:11:50.8696740+03:00;True|2021-10-17T16:04:30.8983905+03:00;True|2021-10-17T15:32:53.6801971+03:00;True|2021-10-16T00:58:52.2587690+03:00;True|2021-10-15T20:11:49.1827379+03:00;True|2021-10-15T17:24:32.5694667+03:00;True|2021-10-15T16:59:43.7991783+03:00;</History>
+  </PropertyGroup>
+</Project>

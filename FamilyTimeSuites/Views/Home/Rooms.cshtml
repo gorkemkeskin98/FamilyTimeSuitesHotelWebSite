@@ -1,0 +1,134 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "Rooms";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 pt-3">
+                <div class="section-titl">
+                    <h4>@localizer["ODALARIMIZ"]</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="border:1px solid #ccc; margin-bottom:25px; margin-top:15px;">
+            <div class="col-lg6 col-md-6 col-sm-12 p-4">
+                <div class="room__text my-auto mx-auto">
+                    <h3>Suite Room</h3>
+                    <ul>
+                        <li><span>@localizer["Size:"]</span>55 m2</li>
+                        <li><span>@localizer["Capacity:"]</span>@localizer["cp"]</li>
+                        <li><span>@localizer["Bed:"]</span>@localizer["ytk"]</li>
+                        <li><span>@localizer["Services:"]</span>@localizer["srv"]</li>
+                    </ul>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c" style="text-decoration:none">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+            <div class="col-lg6 col-md-6 col-sm-12 p-3">
+
+                <div class="owl-carousel rooms owl-theme my-auto">
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-4.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/015.JPG" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/007.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-2.jpg" /></div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="border:1px solid #ccc; margin-bottom:25px; margin-top:15px;">
+            <div class="col-lg6 col-md-6 col-sm-12 p-4">
+                <div class="room__text my-auto mx-auto">
+                    <h3>Deluxe Suite Room</h3>
+                    <ul>
+                        <li><span>@localizer["Size:"]</span>55 m2</li>
+                        <li><span>@localizer["Capacity:"]</span>@localizer["cp"]</li>
+                        <li><span>@localizer["Bed:"]</span>@localizer["ytk"]</li>
+                        <li><span>@localizer["Services:"]</span>@localizer["srv"]</li>
+                    </ul>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c" style="text-decoration:none">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+            <div class="col-lg6 col-md-6 col-sm-12 p-3">
+
+                <div class="owl-carousel rooms owl-theme my-auto">
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-8.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/033.JPG" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/008.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-2.jpg" /></div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="border:1px solid #ccc; margin-bottom:25px; margin-top:15px;">
+            <div class="col-lg6 col-md-6 col-sm-12 p-4">
+                <div class="room__text my-auto mx-auto">
+                    <h3>King Suite Room</h3>
+                    <ul>
+                        <li><span>@localizer["Size:"]</span>55 m2</li>
+                        <li><span>@localizer["Capacity:"]</span>@localizer["cpb"]</li>
+                        <li><span>@localizer["Bed:"]</span>@localizer["ytkb"]</li>
+                        <li><span>@localizer["Services:"]</span>@localizer["srv"]</li>
+                    </ul>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c" style="text-decoration:none">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+            <div class="col-lg6 col-md-6 col-sm-12 p-3">
+
+                <div class="owl-carousel rooms owl-theme my-auto">
+                    <div class="item" style="height:300px;"><img src="~/galeri/017.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-5.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/019.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/015.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-2.jpg" /></div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="border:1px solid #ccc; margin-bottom:25px; margin-top:15px;">
+            <div class="col-lg6 col-md-6 col-sm-12 p-4">
+                <div class="room__text my-auto mx-auto">
+                    <h3>Premium Suite Room</h3>
+                    <ul>
+                        <li><span>@localizer["Size:"]</span>55 m2</li>
+                        <li><span>@localizer["Capacity:"]</span>@localizer["cpbp"]</li>
+                        <li><span>@localizer["Bed:"]</span>@localizer["ytkb"]</li>
+                        <li><span>@localizer["Services:"]</span>@localizer["srv"]</li>
+                    </ul>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c" style="text-decoration:none">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+            <div class="col-lg6 col-md-6 col-sm-12 p-3">
+
+                <div class="owl-carousel rooms owl-theme my-auto">
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-5.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/033.JPG" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/007.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/006.jpg" /></div>
+                    <div class="item" style="height:300px;"><img src="~/galeri/gallery-2.jpg" /></div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    $(".rooms").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 1,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplayTimeout: 3000,
+        autoplay: true
+    });
+
+</script>

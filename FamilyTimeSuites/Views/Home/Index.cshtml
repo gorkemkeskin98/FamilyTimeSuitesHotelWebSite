@@ -1,0 +1,182 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section id="aboutus" class="home-about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="home__about__text">
+                    <div class="section-title">
+                        <h5>@localizer["Hakkimizda"]</h5>
+                        <h3>Family Time Suites</h3>
+                    </div>
+                    <p class="first-para">
+                        @localizer["first-para"]
+                       
+                    </p>
+                    <p class="last-para">
+                        @localizer["last-para"]
+                       
+
+                    </p>
+                </div>
+                <form action="/Home/About/">
+                    <button role="link" class="btn btn-outline-secondary mb-4" style="border-radius:0; ">
+                        @localizer["dahafazlasi"]
+
+                    </button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="home__about__pic">
+                    <img src="~/img/5554.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="home-room spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h5>@localizer["odalarimiz"]</h5>
+                    <h4>@localizer["Otelimizi Keşfedin"]</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="home__room__item set-bg" data-setbg="~/img/room1.jpg" style="background-image: url('../../img/room1.jpg');  ">
+                    <div class="home__room__title">
+                        <h4>Suite Room</h4>
+                    </div>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="home__room__item set-bg" data-setbg="~/img/room4.jpg" style="background-image: url('../../img/room4.jpg'); ">
+                    <div class="home__room__title">
+                        <h4>Deluxe Suite Room</h4>
+
+                    </div>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0 ">
+                <div class="home__room__item set-bg " data-setbg="~/img/room-5.jpg" style=" background-image: url('../../img/room-5.jpg');  ">
+                    <div class="home__room__title">
+                        <h4>King Suite Room</h4>
+
+                    </div>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0 ">
+                <div class="home__room__item set-bg" data-setbg="~/img/room2.jpg" style="background-image: url('../../img/room2.jpg');">
+                    <div class="home__room__title">
+
+                        <h4>Premium Suite Room</h4>
+
+                    </div>
+                    <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c">@localizer["Rezervasyon"]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery-title pt-lg-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 my-auto">
+                <h5>@localizer["Galeri"]</h5>
+                <h3>@localizer["OTELİN EN GÜZELİNİ KEŞFEDİN"]</h3>
+            </div>
+            <div class="col-6">
+                <p>@localizer["galeriaciklama"]</p>
+                <a href="/Home/Gallery/" class="btn ">
+                    @localizer["explore"]
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="gallery">
+    <div class="wrapper">
+        <div class="kk carousel owl-carousel">
+            <div class="card ">
+
+                <img src="~/img/galeri-1.jpg" />
+            </div>
+            <div class="card ">
+
+                <img src="~/img/galeri-2.jpg" />
+            </div>
+            <div class="card ">
+                <img src="~/img/galeri-3.jpg" />
+            </div>
+            <div class="card ">
+
+                <img src="~/img/galeri-4.jpg" />
+            </div>
+            <div class="card ">
+                <img src="~/img/galeri-5.jpg" />
+
+            </div>
+            <div class="card ">
+
+                <img src="~/img/galeri-6.jpg" />
+            </div>
+            <div class="card">
+                <img src="~/img/galeri-7.jpg" />
+            </div>
+            <div class="card ">
+                <img src="~/img/galeri-8.jpg" />
+
+            </div>
+            <div class="card ">
+                <img src="~/img/galeri-9.jpg" />
+            </div>
+            <div class="card ">
+                <img src="~/img/galeri-10.jpg" />
+            </div>
+            <div class="card ">
+                <img src="~/img/galeri-11.jpg" />
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+        $(".kk").owlCarousel({
+            margin: 20,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                600: {
+                    items: 2,
+                    nav: false
+                },
+
+                1024: {
+                    items: 3,
+                    nav: false
+                },
+                1500: {
+                    items: 4,
+                    nav: false
+                }
+            }
+        });
+</script>

@@ -1,0 +1,41 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="aboutus" class="home-about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="home__about__text">
+                    <div class="section-title">
+                        <h5>@localizer["Hakkımızda"]</h5>
+                        <h3>Family Time Suites</h3>
+                    </div>
+                    <p class="first-para">
+                       @localizer["first"] 
+                    </p>
+                    <p class="first-para">
+                       @localizer["second"] 
+                    </p>
+                    <p class="first-para">
+                        @localizer["third"] 
+                    </p>
+                    <p class="first-para">
+                        @localizer["fourth"] 
+                    </p>
+                    <p class="last-para">
+                        @localizer["fifth"] 
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="home__about__pic">
+                    <img src="~/img/5554.jpg" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

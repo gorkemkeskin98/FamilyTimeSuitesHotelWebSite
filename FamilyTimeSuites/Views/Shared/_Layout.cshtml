@@ -1,0 +1,228 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Time Suites</title>
+    <link rel="icon" type="image/svg+xml" href="~/favicon.svg" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-expand-md navbar-dark p-md-4 p-lg-4">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-lg-5 ms-md-5"  href="#">FamilyTimeSuites</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-4 me-md-4">
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString()=="Index"?"active":"")">
+                            <a class="nav-link " href="/Home/Index/"> @localizer["Anasayfa"]</a>
+                        
+                        </li>
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString()=="About"?"active":"")">
+                            <a class="nav-link " href="/Home/About/"> @localizer["Hakkımızda"]</a>
+                        </li>
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString()=="Rooms"?"active":"")">
+                            <a class="nav-link " href="/Home/Rooms/"> @localizer["Odalar"]</a>
+                        </li>
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString()=="Gallery"?"active":"")">
+                            <a class="nav-link " href="/Home/Gallery/"> @localizer["Galeri"]</a>
+                        </li>
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString()=="Contact"?"active":"")" style="margin-right:10px;">
+                            <a class="nav-link " href="/Home/Contact/" > @localizer["İletişim"]</a>
+                        </li>
+                        <li class="gg" style="margin-right: 5px;">
+                            <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c" class="btn btn-outline-primary  " style="border-radius: 0;">@localizer["Rezervasyon"]</a>
+                        </li>
+                        <li class="gg py-md-0 py-lg-0 py-sm-1">
+                            <partial name="_Culture" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="owl-carousel slider owl-theme">
+        <div class="item text-center">
+            <img src="~/img/slider1.jpg" />
+            <div class="carousel-caption position-absolute">
+                <h2>@localizer["sldt1"]</h2>
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="~/img/slider2.jpg" />
+            <div class="carousel-caption position-absolute">
+                <h2>@localizer["sldt2"]</h2>
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="~/img/slider-3.jpg" />
+            <div class="carousel-caption position-absolute">
+                <h2>@localizer["sldt3"]</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+    @RenderBody()
+
+
+    <div class="chooseus spad set-bg" data-setbg="~/img/030.jpg" style="background-image: url('../../img/030.jpg'); ">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="chooseus__text">
+                        <div class="section-title">
+                            <h3 class="text-white">@localizer["choosus"] </h3>
+                            <form class="pt-2">
+                                <a href="https://secure.phobs.net/booking.php?sid=vbn1lkve0meiie48ajvb6g0f63&companyid=1228&crcid=e1cf9ea05fe39c2991edbd29b6a6a39c" class="btn btn-outline-primary  " style="border-radius: 0; color:white;">@localizer["Rezervasyon"]</a>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-lg-start text-white"
+            style="background-color:rgba(0, 0, 0, 0.900) !important;">
+        <!-- Grid container -->
+        <div class="container  pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="logo" style="font-size: x-large; font-family: 'Pacifico';">
+                            Family Time Suites
+                        </h5>
+                        <p>
+                           @localizer["footeraciklama"]
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="footer-link col-md-3 col-lg-2 col-xl-2 mx-auto mt-lg-3 mt-md-3">
+                        <h5 class=" mb-3 ">
+                            @localizer["Sayfalar"]
+                        </h5>
+                        <p>
+                            <a href="/Home/Index/">@localizer["Anasayfa"]</a>
+                        </p>
+                        <p>
+                            <a href="/Home/About/">@localizer["Hakkımızda"]</a>
+                        </p>
+                        <p>
+                            <a href="/Home/Rooms/">@localizer["Odalar"]</a>
+                        </p>
+
+                        <p>
+                            <a href="/Home/Gallery/">@localizer["Galeri"]</a>
+                        </p>
+                        <p>
+                            <a href="/Home/Contact/">@localizer["İletişim"]</a>
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="aboutus col-md-4 col-lg-3 col-xl-3 mx-auto mt-lg-3 mt-md-3">
+                        <h5 class=" mb-3 "> @localizer["İletişim"]</h5>
+                        <p><i class="fas fa-home mr-3"></i> Çağlayan Mah. Vatan Cad. Ekim Sk. No:3,34500 Kâğıthane/İstanbul</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@familytimesuites.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> <a href="tel:+90-533-732-85-41" style="text-decoration: none; color:rgb(116, 116, 116);"> +90 533 732 58 41</a></p>
+
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <!-- Copyright -->
+                        <div class="p-3">
+                            Copyright©
+                            <script>document.write(new Date().getFullYear());</script> @localizer["Allrights"]
+                        </div>
+                        <!-- Copyright -->
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="social-icon col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <!-- Facebook -->
+                        <div class="social pt-2 pb-2">
+                            <ul class="social-icons">
+                                <li><a class="facebook" href="/Home/Index/"><i class="fab fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="/Home/Index/"><i class="fab fa-twitter"></i></a></li>
+                                <li><a class="dribbble" href="/Home/Index/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a class="linkedin" href="/Home/Index/"><i class="fab fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+        <!-- Grid container -->
+    </footer>
+
+    <script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            items: 1,
+            dots: false,
+            nav: true,
+            navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+            smartSpeed: 1200,
+            autoHeight: false,
+            autoplay: false
+        });
+
+    </script>
+    <script type="text/javascript">
+        var nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 120) {
+                nav.classList.add('bg-dark', 'shadow');
+            } else {
+                nav.classList.remove('bg-dark', 'shadow');
+            }
+        });
+    </script>
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

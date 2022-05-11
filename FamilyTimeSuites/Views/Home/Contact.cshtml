@@ -1,0 +1,97 @@
+﻿@model FamilyTimeSuites.Models.FormModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="iletisimform container-fluid mb-5  ">
+    <div class="row text-center mb-3" style="margin-left:50px; margin-right:50px;">
+        <div class="col-lg-4 col-sm-12 ">
+            <i class="fas fa-home mr-3" style="font-size:25px;"></i><p>Çağlayan Mah. Vatan Cad. Ekim Sk. No:3,34500 Kâğıthane/İstanbul </p>
+        </div>
+        <div class="col-lg-4 col-sm-12"> <i class="fas fa-envelope mr-3" style="font-size:25px;"></i> <p> info@familytimesuites.com</p></div>
+        <div class="col-lg-4 col-sm-12 ">
+            <i class="fas fa-phone mr-3" style="font-size:25px;"></i>
+            <p> <a href="tel:+90-533-732-85-41" style="text-decoration: none; font-family: 'Roboto'; color: rgb(116, 116, 116);"> +90 533 732 58 41</a></p>
+        </div>
+    </div>
+    <div class="row mesajkutusu">
+        <div class="col-lg-5 col-sm-12 pb-4">
+            <iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12031.045760469853!2d28.981417!3d41.074207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x467ac6fadfa9f76e!2sFamily%20Time%20Suites!5e0!3m2!1str!2str!4v1633178527179!5m2!1str!2str" style=" width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="mesaj col-lg-7 col-sm-12">
+            <div class="wrapper container">
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "well form-horizontal" }))
+                {
+
+                <div class="form-horizontal" id="form">
+                    <h4>@localizer["ContactUs"]</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="row dbl-field">
+
+                        <div class="field col-lg-6 col-md-6 col-sm-12">
+
+                            <input class="form-control input-validation-error" data-val="true" data-val-required="@localizer["error1"]" id="Adi" name="Adi" placeholder="@localizer["Ad"]" type="text" value="" aria-describedby="Adi-error" aria-invalid="true">
+                            <i class='fas fa-user'></i>
+                            @Html.ValidationMessageFor(model => model.Adi, "", new { @class = "text-danger", style = "position:absolute; margin-top:50px;" })
+                        </div>
+                        <div class="field col-lg-6 col-md-6 col-sm-12">
+                           
+                            <input class="form-control" data-val="true" data-val-required="@localizer["error1"]" id="Soyadi" name="Soyadi" placeholder="@localizer["Soyad"]" type="text" value="">
+                            <i class='fas fa-user'></i>
+                            @Html.ValidationMessageFor(model => model.Soyadi, "", new { @class = "text-danger", style = "position:absolute; margin-top:50px;" })
+                        </div>
+                    </div>
+                    <div class="row dbl-field">
+
+                        <div class="field col-lg-6 col-md-6 col-sm-12">
+                         
+                            <input class="form-control" data-val="true" data-val-maxlength="@localizer["errorTel"]" data-val-maxlength-max="15" id="Tel" maxlength="15" name="Tel" placeholder="@localizer["Tel"]" type="text" value="">
+                            <i class='fas fa-phone-alt'></i>
+                            @Html.ValidationMessageFor(model => model.Tel, "", new { @class = "text-danger", style = "position:absolute; margin-top:50px;" })
+                        </div>
+                        <div class="field col-lg-6 col-md-6 col-sm-12 ">
+                        
+                            <input class="form-control" data-val="true" data-val-email="@localizer["errorEmail"]" data-val-required="@localizer["error1"]" id="Email" name="Email" placeholder="Email" type="text" value="">
+                            <i class='fas fa-envelope'></i>
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger", style = "position:absolute; margin-top:50px;" })
+                        </div>
+                    </div>
+
+                    <div class="message row">
+
+                        <div class="col-12">
+                            <i class="fas fa-comment-alt"></i>
+                       
+                            <textarea class="form-control" data-val="true" data-val-maxlength="@localizer["krt"]" data-val-maxlength-max="500" data-val-required="@localizer["error1"]" id="Mesaj" maxlength="500" name="Mesaj" placeholder="@localizer["Mesaj"]"></textarea>
+
+                            @Html.ValidationMessageFor(model => model.Mesaj, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @if (TempData["Başarılı"] != null) { 
+                        <div class="alert alert-success" role="alert" id="success=message">
+                            @localizer["successMessage"]
+                        </div>
+                        if (TempData["Hata"]!= null)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @TempData["Hata"].ToString()
+                            </div>
+                        }
+                    }
+                    <div class="button-area">
+                        <button type="submit" class="btn btn-primary">@localizer["Send"]</button>
+                    </div>
+
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
